@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Bulb</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <img v-show="bulbOn" src="bulb-on.png" alt="" />
+      <img v-show="!bulbOn" src="bulb-off.png" alt="" />
+      <div>
+        <p>Bulb is {{ bulbOn ? "ON" : "OFF" }}</p>
+        <button @click="toggleBulb">Toggle Bulb</button>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
